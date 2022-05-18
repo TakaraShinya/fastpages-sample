@@ -1,0 +1,1 @@
+Sitemap: https://takarashinya.github.io/fastpages-sample/sitemap.xml
