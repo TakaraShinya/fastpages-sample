@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      1 min read
     
 </span></p>
 
@@ -174,7 +174,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"test timer"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"hogehoge timer"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -187,7 +187,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>test timer
+<pre>hogehoge timer
 </pre>
 </div>
 </div>
@@ -257,19 +257,19 @@ optional arguments:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Requirement already satisfied: boto3 in /opt/conda/lib/python3.10/site-packages (1.24.10)
-Requirement already satisfied: s3transfer&lt;0.7.0,&gt;=0.6.0 in /opt/conda/lib/python3.10/site-packages (from boto3) (0.6.0)
-Requirement already satisfied: botocore&lt;1.28.0,&gt;=1.27.10 in /opt/conda/lib/python3.10/site-packages (from boto3) (1.27.10)
-Requirement already satisfied: jmespath&lt;2.0.0,&gt;=0.7.1 in /opt/conda/lib/python3.10/site-packages (from boto3) (1.0.0)
-Requirement already satisfied: python-dateutil&lt;3.0.0,&gt;=2.1 in /opt/conda/lib/python3.10/site-packages (from botocore&lt;1.28.0,&gt;=1.27.10-&gt;boto3) (2.8.2)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.25.4 in /opt/conda/lib/python3.10/site-packages (from botocore&lt;1.28.0,&gt;=1.27.10-&gt;boto3) (1.26.9)
-Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.10/site-packages (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore&lt;1.28.0,&gt;=1.27.10-&gt;boto3) (1.16.0)
+<pre>Requirement already satisfied: boto3 in /opt/conda/lib/python3.9/site-packages (1.23.3)
+Requirement already satisfied: botocore&lt;1.27.0,&gt;=1.26.3 in /opt/conda/lib/python3.9/site-packages (from boto3) (1.26.3)
+Requirement already satisfied: jmespath&lt;2.0.0,&gt;=0.7.1 in /opt/conda/lib/python3.9/site-packages (from boto3) (1.0.0)
+Requirement already satisfied: s3transfer&lt;0.6.0,&gt;=0.5.0 in /opt/conda/lib/python3.9/site-packages (from boto3) (0.5.2)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.25.4 in /opt/conda/lib/python3.9/site-packages (from botocore&lt;1.27.0,&gt;=1.26.3-&gt;boto3) (1.26.9)
+Requirement already satisfied: python-dateutil&lt;3.0.0,&gt;=2.1 in /opt/conda/lib/python3.9/site-packages (from botocore&lt;1.27.0,&gt;=1.26.3-&gt;boto3) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore&lt;1.27.0,&gt;=1.26.3-&gt;boto3) (1.16.0)
 Note: you may need to restart the kernel to use updated packages.
-Requirement already satisfied: pandas in /opt/conda/lib/python3.10/site-packages (1.4.2)
-Requirement already satisfied: numpy&gt;=1.21.0 in /opt/conda/lib/python3.10/site-packages (from pandas) (1.22.4)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/conda/lib/python3.10/site-packages (from pandas) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /opt/conda/lib/python3.10/site-packages (from pandas) (2022.1)
-Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.10/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
+Requirement already satisfied: pandas in /opt/conda/lib/python3.9/site-packages (1.4.2)
+Requirement already satisfied: numpy&gt;=1.18.5 in /opt/conda/lib/python3.9/site-packages (from pandas) (1.22.3)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/conda/lib/python3.9/site-packages (from pandas) (2022.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in /opt/conda/lib/python3.9/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/conda/lib/python3.9/site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
 Note: you may need to restart the kernel to use updated packages.
 </pre>
 </div>
@@ -321,17 +321,17 @@ Note: you may need to restart the kernel to use updated packages.
     <span class="n">name</span> <span class="o">=</span> <span class="n">tags_filter</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">tags_filter</span> <span class="k">else</span> <span class="s1">''</span>
     <span class="c1"># Cidr 取得と buffer 格納</span>
     <span class="k">for</span> <span class="n">assoc</span> <span class="ow">in</span> <span class="n">vpc</span><span class="p">[</span><span class="s1">'CidrBlockAssociationSet'</span><span class="p">]:</span>
-        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
-            <span class="n">name</span><span class="p">,</span>
-            <span class="n">vpc</span><span class="p">[</span><span class="s1">'VpcId'</span><span class="p">],</span>
-            <span class="n">assoc</span><span class="p">[</span><span class="s1">'CidrBlock'</span><span class="p">],</span>
-            <span class="n">vpc</span><span class="p">[</span><span class="s1">'InstanceTenancy'</span><span class="p">],</span>
-            <span class="n">vpc</span><span class="p">[</span><span class="s1">'IsDefault'</span><span class="p">]</span>
-        <span class="p">])</span>
         <span class="c1"># data.append([</span>
+        <span class="c1">#     name,</span>
+        <span class="c1">#     vpc['VpcId'],</span>
+        <span class="c1">#     assoc['CidrBlock'],</span>
         <span class="c1">#     vpc['InstanceTenancy'],</span>
         <span class="c1">#     vpc['IsDefault']</span>
         <span class="c1"># ])</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+            <span class="n">vpc</span><span class="p">[</span><span class="s1">'InstanceTenancy'</span><span class="p">],</span>
+            <span class="n">vpc</span><span class="p">[</span><span class="s1">'IsDefault'</span><span class="p">]</span>
+        <span class="p">])</span>
 </pre></div>
 
     </div>
@@ -348,8 +348,7 @@ Note: you may need to restart the kernel to use updated packages.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_vpcs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Name"</span><span class="p">,</span> <span class="s2">"VpcId"</span><span class="p">,</span> <span class="s2">"Cidr"</span><span class="p">,</span> <span class="s2">"Tenancy"</span><span class="p">,</span> <span class="s2">"IsDefault"</span><span class="p">])</span>
-<span class="c1"># df_vpcs = pd.DataFrame(data,  columns=["Tenancy", "IsDefault"])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_vpcs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Tenancy"</span><span class="p">,</span> <span class="s2">"IsDefault"</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -398,9 +397,6 @@ Note: you may need to restart the kernel to use updated packages.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Name</th>
-      <th>VpcId</th>
-      <th>Cidr</th>
       <th>Tenancy</th>
       <th>IsDefault</th>
     </tr>
@@ -408,17 +404,11 @@ Note: you may need to restart the kernel to use updated packages.
   <tbody>
     <tr>
       <th>0</th>
-      <td>dev-caad-direct-connect-vpc</td>
-      <td>vpc-49a7112e</td>
-      <td>10.141.180.0/22</td>
       <td>default</td>
       <td>False</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>dev-bastille-vpc</td>
-      <td>vpc-e5d5868c</td>
-      <td>10.30.0.0/16</td>
       <td>default</td>
       <td>False</td>
     </tr>
@@ -459,8 +449,7 @@ Note: you may need to restart the kernel to use updated packages.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_rtbs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rtbs</span><span class="p">,</span>  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"VpcId"</span><span class="p">,</span> <span class="s2">"RouteTableId"</span><span class="p">,</span> <span class="s2">"SubnetId"</span><span class="p">,</span> <span class="s2">"Tags"</span><span class="p">])</span>
-<span class="c1"># df_rtbs = pd.DataFrame(rtbs,  columns=["SubnetId"])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_rtbs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rtbs</span><span class="p">,</span>  <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"SubnetId"</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -478,7 +467,6 @@ Note: you may need to restart the kernel to use updated packages.
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_rtbs</span>
-<span class="c1"># rtbs</span>
 </pre></div>
 
     </div>
@@ -510,205 +498,35 @@ Note: you may need to restart the kernel to use updated packages.
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>VpcId</th>
-      <th>RouteTableId</th>
       <th>SubnetId</th>
-      <th>Tags</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>vpc-e5d5868c</td>
-      <td>rtb-f8d58691</td>
       <td>NaN</td>
-      <td>[{'Key': 'Name', 'Value': 'dev-bastille-pub-rt...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>vpc-49a7112e</td>
-      <td>rtb-0640b12c29386d9bc</td>
       <td>NaN</td>
-      <td>[{'Key': 'Name', 'Value': 'dev-caad-direct-con...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>vpc-49a7112e</td>
-      <td>rtb-d5fec1b2</td>
       <td>NaN</td>
-      <td>[{'Key': 'Name', 'Value': 'dev-caad-direct-con...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>vpc-e5d5868c</td>
-      <td>rtb-e6d5868f</td>
       <td>NaN</td>
-      <td>[{'Key': 'Name', 'Value': 'dev-bastille-prv-rt...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>vpc-e5d5868c</td>
-      <td>rtb-7de8f81f</td>
       <td>NaN</td>
-      <td>[{'Key': 'Name', 'Value': 'dev-bastille-prv-rt...</td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
 
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">'ec2'</span><span class="p">)</span>
-<span class="n">running_instances</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">describe_instances</span><span class="p">(</span>
-  <span class="n">Filters</span><span class="o">=</span><span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s1">'Name'</span><span class="p">:</span> <span class="s1">'instance-state-name'</span><span class="p">,</span>
-      <span class="s1">'Values'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'running'</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">]</span>
-<span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dataframe_instances = running_instances['Reservations']</span>
-<span class="c1"># dataframe_instances[0]['Instances'][0]['InstanceId']</span>
-<span class="c1"># df_instances = pd.DataFrame(dataframe_instances,  columns=["InstanceId", "InstanceType", "PrivateIpAddress", "LaunchTime", "Tags"])</span>
-<span class="c1"># df_instances</span>
-<span class="o">!</span>which aws
-<span class="o">!</span>aws s3 ls
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/usr/local/bin/aws
-2020-08-05 08:14:09 39dabo-tfstate
-2021-05-28 15:00:10 amazon-connect-ac2d21e3332c
-2021-07-14 15:00:09 amazon-connect-b98550397449
-2021-07-20 02:42:20 amazon-connect-d24c0e650a34
-2022-02-22 03:04:57 amazon-connect-eb56dc1d3228
-2020-10-29 05:49:47 amplify-amplify-sns-workshop-production-144938-deployment
-2021-03-17 08:30:11 amplify-next-app-20210317173002-deployment
-2021-03-17 08:46:55 amplify-next-takara-20210317174647-deployment
-2021-03-17 09:26:40 amplifyappkengo-20210317182426-hostingbucket-dev
-2021-03-17 09:15:22 amplifyappmiyazato-20210317181424-hostingbucket-dev
-2021-03-17 09:10:51 amplifytakaranextapp-20210317181040-deployment
-2021-03-17 09:28:51 amplifytakaranextapp-20210317182843-deployment
-2021-03-17 10:33:24 amplifytakaranextapp-20210317193218-hostingbucket-dev
-2020-06-18 17:53:37 aws-20190408101533-deployment
-2020-06-18 17:53:37 aws-20190408121357-deployment
-2019-10-23 03:21:17 aws-athena-query-results-ap-northeast-1-880785016310
-2021-07-08 00:30:02 aws-cloudtrail-logs-880785016310-43e06201
-2021-07-29 15:00:06 aws-sam-cli-managed-default-samclisourcebucket-18v8bujhgau1e
-2020-06-12 17:29:26 backup-bastilledev-ap-southeast-1
-2019-11-22 05:37:09 c003
-2020-10-14 15:00:06 cdktoolkit-stagingbucket-1p8ysnz7b0hai
-2020-06-18 19:19:32 cf-templates-qouv3vfo2do3-ap-northeast-1
-2021-02-22 10:52:32 chapix
-2020-06-18 20:04:06 connect-950c185ae65f
-2020-06-18 20:13:31 cs-dev-bastille
-2021-05-18 09:13:43 cxplus-amazonconnect
-2022-03-28 05:18:45 cxplus-google-analytics
-2019-11-18 09:32:16 dev-bas-csv-migration-error-c003
-2020-06-18 20:32:59 dev-bas-csv-migration-error-test-yamato
-2019-11-18 10:45:07 dev-bas-csv-migration-success-c003
-2020-06-18 20:32:59 dev-bas-csv-migration-success-test-yamato
-2020-03-10 02:51:38 dev-bas-customer-account
-2020-06-18 20:32:59 dev-bas-escalation
-2020-02-26 09:34:48 dev-bas-ikusa-sync-userinfo
-2020-06-18 20:32:59 dev-bas-reward-error
-2020-06-18 20:32:59 dev-bas-reward-evidence
-2020-06-18 20:32:59 dev-bas-reward-send
-2020-06-18 20:32:59 dev-bas-reward-success
-2022-06-07 08:01:06 dev-bas-template
-2020-06-18 20:32:59 dev-bas-ticket
-2020-06-18 20:32:59 dev-bas-ticket-new
-2019-11-21 12:28:53 dev-bastille-tfstate
-2020-06-18 20:35:54 dev-labastille-escalation
-2020-06-18 20:35:54 dev-labastille-escalation-follow
-2020-06-18 20:35:54 dev-labastille-follow
-2020-06-18 20:35:54 dev-labastille-logs
-2020-06-18 20:35:54 dev-labastille-send-mail
-2020-06-18 20:35:54 dev-labastille-ticket
-2020-06-18 20:35:54 dev-labastille-ticket-follow
-2020-06-18 20:35:54 dev-labastille-tmp
-2020-06-18 20:36:51 dev-ml-queue
-2020-06-19 17:59:37 devsyncchat-20190417072526-deployment
-2020-06-19 18:11:25 dsg.bastilledev.com
-2020-06-19 18:42:06 elasticbeanstalk-ap-northeast-1-880785016310
-2020-06-19 18:53:15 est-bastille-dev2
-2021-06-17 03:15:22 line-bot-lambda-sample
-2021-06-22 00:34:40 logs-alb-prd-corp-wp
-2021-05-28 15:00:09 miyazato-chat-demo
-2021-09-29 06:37:38 odev-0929-bastille-api-d-serverlessdeploymentbuck-12morn7936t7n
-2021-11-04 02:16:39 odev-1104-bastille-api-d-serverlessdeploymentbuck-pjpf3k6ikeu7
-2021-10-05 01:35:36 odev1005-bastille-api-de-serverlessdeploymentbuck-gh2d8w5ynky7
-2021-10-22 01:44:44 odev1022-bastille-api-de-serverlessdeploymentbuck-1trrfpc8fppl0
-2021-10-25 02:51:26 odev1023-bastille-api-de-serverlessdeploymentbuck-295lgf2ng6s5
-2021-09-27 08:16:00 oshiro-dev-0927-bastille-serverlessdeploymentbuck-lep2qgelst1p
-2020-07-24 15:16:39 prd-corp-wp-content
-2020-02-12 09:48:15 prd-wp-old
-2019-11-21 12:13:18 prod-bastille-tfstate
-2021-11-08 08:27:01 qna-dev-dev-bootstrap-1-bucket-jma6g9cicv4
-2021-11-08 11:35:26 qna-dev-dev-master-1-exportbucket-1xxintg1k6jnw
-2020-06-27 21:40:48 receive-mail-bastilledev.com
-2020-01-21 02:22:04 seach-synonym
-2022-05-11 03:35:38 stackset-app-autify-infr-pipelinebuiltartifactbuc-15bny4oi94l13
-2021-11-30 15:00:09 stackset-cxplus-front-ap-pipelinebuiltartifactbuc-1h3dkv9qe3m71
-2021-03-31 15:00:09 stackset-demo-app-infras-pipelinebuiltartifactbuc-1i45d8839pg7p
-2021-03-30 15:00:10 stackset-demo-app-infras-pipelinebuiltartifactbuc-ijl5bgl2i9yr
-2019-11-12 04:21:04 stg-corp-wp-content
-2021-12-20 01:30:26 takaesu-es-backup
-2021-11-08 08:28:08 takara-qnabot-exportbucket-50pza0p99hsx
-2020-06-20 00:53:51 tdev0210-maintenance
-2021-04-06 06:16:06 tdev0406-webapp-logs
-2020-06-20 00:56:26 template-dev-labastille
-2020-06-20 00:56:26 template-development-bastille
-2019-11-15 04:26:16 test-import-csv
-2019-07-19 10:12:08 test-tine-to-bastille-pipeline-bucket
-2020-06-20 01:05:34 test-yamato
-2020-06-20 01:10:57 testvuechat-20190418111916-deployment
-2020-07-24 15:14:11 tmp-prd-corp-wp-content
-2020-06-20 01:51:46 vue-todo-list-20190417220854-deployment
-2020-06-20 01:51:46 vue-todo-list-20190418100948-deployment
-2020-06-20 01:51:46 vue-todo-list-20190418104132-deployment
-2020-06-20 01:51:49 vuegraphqlchatsource-20190418140702-deployment
-</pre>
-</div>
 </div>
 
 </div>
